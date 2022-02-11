@@ -9,8 +9,8 @@ namespace SubEnglishChineseStringTests
         [Fact]
         public void TestSubEnglishChineseString()
         {
-            String str = "TESTWORD´ú¸Õ¤å¦rTEST";
-            Assert.Equal("ESTWORD´ú¸Õ¤å¦r", Program.SubEnglishChineseString(str, 1, 15));
+            String str = "TESTWORDæ¸¬è©¦æ–‡å­—TEST";
+            Assert.Equal("ESTWORDæ¸¬è©¦æ–‡å­—", Program.SubEnglishChineseString(str, 1, 15));
         }
     }
 }
