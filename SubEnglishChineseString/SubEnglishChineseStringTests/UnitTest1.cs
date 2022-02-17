@@ -9,8 +9,8 @@ namespace SubEnglishChineseStringTests
         [Fact]
         public void SubBig5StringTest()
         {
-            String str = "TESTWORD´ú¸Õ¤å¦rTEST";
-            Assert.Equal("ESTWORD´ú¸Õ¤å¦r", Program.SubBig5String(str, 1, 15));
+            String str = "TESTWORDæ¸¬è©¦æ–‡å­—TEST";
+            Assert.Equal("ESTWORDæ¸¬è©¦æ–‡å­—", Program.SubBig5String(str, 1, 15));
         }
     }
 }

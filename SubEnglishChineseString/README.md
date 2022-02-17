@@ -2,10 +2,10 @@
 
 ```csharp
 [Fact]
-public void TestSubEnglishChineseString()
+public void SubBig5StringTest()
 {
     String str = "TESTWORD測試文字TEST";
-    Assert.Equal("ESTWORD測試文字", Program.SubEnglishChineseString(str, 1, 15));
+    Assert.Equal("ESTWORD測試文字", Program.SubBig5String(str, 1, 15));
 }
 ```
 ### 測試結果
