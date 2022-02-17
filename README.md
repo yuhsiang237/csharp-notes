@@ -12,4 +12,9 @@
   <td>SubEnglishChineseString</td>
 <td>處理中英混雜字串擷取字段</td>
 </tr>
+<tr>
+<td>2</td>
+  <td>ILoggerSample</td>
+<td>ILogger使用，紀錄本地例外錯誤資訊</td>
+</tr>
 </table>
