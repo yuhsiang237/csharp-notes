@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Linq;
 
 namespace SubEnglishChineseString
 {
@@ -12,36 +13,20 @@ namespace SubEnglishChineseString
         static void Main(string[] args)
         {
             string str = "TESTWORD測試文字TEST";
-            Console.WriteLine(SubEnglishChineseString(str,1,15));
+            Console.WriteLine(SubBig5String(str, 1, 15));
         }
         /// <summary>
-        /// C#中擷取某長度中英混雜字串
+        /// C#中擷取Big5子字串
         /// </summary>
-        /// <param name="str"></param>
-        /// <param name="start"></param>
-        /// <param name="length"></param>
-        /// <returns></returns>
-        public  static string SubEnglishChineseString(string str,int start,int length)
+        /// <param name="str">字串</param>
+        /// <param name="start">擷取起始索引</param>
+        /// <param name="length">擷取長度</param>
+        /// <returns>string</returns>
+        public static string SubBig5String(string str, int start, int length)
         {
             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
-            byte[] subByteArray = SubByteArray(Encoding.GetEncoding("big5").GetBytes(str), start, length);
+            byte[] subByteArray = Encoding.GetEncoding("big5").GetBytes(str).Skip(start).Take(length).ToArray();
             return Encoding.GetEncoding("big5").GetString(subByteArray);
-        }
-        /// <summary>
-        /// C#中取得某長度byte陣列結果
-        /// </summary>
-        /// <param name="byteArray"></param>
-        /// <param name="start"></param>
-        /// <param name="length"></param>
-        /// <returns></returns>
-        public static byte[] SubByteArray(byte [] byteArray,int start,int length) 
-        {
-            byte[] resultArray = new byte[length];
-            for(int i=start,j=0;i<start+length;i++,j++)
-            {
-                resultArray[j] = byteArray[i];
-            }
-            return resultArray;
         }
     }
 }
