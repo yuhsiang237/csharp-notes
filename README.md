@@ -17,4 +17,9 @@
   <td>ILoggerSample</td>
 <td>ILogger使用，紀錄本地例外錯誤資訊</td>
 </tr>
+<tr>
+<td>3</td>
+  <td>LinqNote</td>
+<td>紀錄LINQ使用的紀錄、常見作法</td>
+</tr>
 </table>
