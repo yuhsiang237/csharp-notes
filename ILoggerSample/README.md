@@ -1,0 +1,3 @@
+### ILoggerSample
+錯誤Log寫入範例
+目前差建立錯誤LOG至本地，撰寫中...
