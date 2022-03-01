@@ -3,14 +3,15 @@ using iText.Kernel.Pdf;
 using iText.Layout;
 using iText.Layout.Element;
 using iText.Layout.Properties;
+using System;
 
 namespace IText7Sample
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            PdfFont sysFont = PdfFontFactory.CreateFont("./../../../NotoSansCJKtc-Regular.otf", iText.IO.Font.PdfEncodings.IDENTITY_H);
+            PdfFont sysFont = PdfFontFactory.CreateFont(Environment.CurrentDirectory + "/src/fonts/NotoSansCJKtc-Regular.otf", iText.IO.Font.PdfEncodings.IDENTITY_H);
 
             // Must have write permissions to the path folder
             PdfWriter writer = new PdfWriter(@"demo.pdf");
