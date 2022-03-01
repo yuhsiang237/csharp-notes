@@ -22,4 +22,10 @@
   <td>LinqNote</td>
 <td>紀錄LINQ使用的紀錄、常見作法</td>
 </tr>
+<tr>
+<td>4</td>
+  <td>IText7Sample</td>
+<td>紀錄PDF檔案生成作法</td>
+</tr>
+
 </table>
